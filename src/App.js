@@ -32,9 +32,9 @@ function App() {
 
   //Funcion del numero de pagina
   const onChangePage = (pagenext) => {
-    if (page + pagenext < 1) return;
-    if (page + pagenext > 9) return;
-    setpage(page + pagenext);
+  if (page + pagenext < 1) return;
+  if (page + pagenext > 9) return;
+  setpage(page + pagenext);
   }
 
   //evento del input de texto
@@ -87,7 +87,7 @@ function App() {
         )
           : null
         }
-        <h5 className=' mt-2'> {page} </h5>
+        <h5 className=' mt-2'> |{page}| </h5>
         {(characters.next) ? (
 
           <button className='page-link' onClick={() => { onChangePage(1); clicknext() }} >Siguiente</button>
